@@ -5,6 +5,7 @@ classDiagram
 class Animal {
     + name: String
     + age: int
+    + birthday: int
     + health: double
     + hunger: double
     + energy: double
