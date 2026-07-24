@@ -39,6 +39,20 @@ id3(Free up space in enclosure)
 Animal is born
 ```mermaid
 flowchart TD
-id1(Animal lays egg without reason as one does)-->
-DB1@{ shape: cyl, label: "Egg is added to storage" }
+id1(New day)-->
+DB1@{ shape: cyl, label: "Increase all eggs' ages by 1" }--If ready to hatch-->
+id2(Message: A baby hatched)-->
+DB2@{ shape: cyl, label: "Check for free enclosures of the correct type" }--Enough free space in enclosures-->
+id3@{ shape: rect, label: "Choose whether to keep animal" }--Keep them-->
+id4@{ shape: rect, label: "Name the baby and choose an enclosure" }-->
+DB3@{ shape: cyl, label: "Store animal with full stats and age 0" }
+
+id3--Don't keep them-->
+id5(Animal is removed)
+
+DB2--Not enough space-->
+id6(New message two days later)--Enough free space-->
+id3
+id6--Not enough space-->
+id5
 ```
