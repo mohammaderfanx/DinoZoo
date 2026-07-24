@@ -1,3 +1,4 @@
+Animal class
 ```mermaid
 classDiagram
 
@@ -34,4 +35,8 @@ class Dinosaur {
     + lifecycle = [30, 80, 110]
 }
 Dinosaur --|> Animal
+
+
+
+
 ```
